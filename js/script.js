@@ -32,3 +32,21 @@ document.getElementById('calculator-keypad').addEventListener('click', function 
         calcInput.value = newNumber;
     }
 });
+/* Submit Button Linked up */
+function verifyPin() {
+    const pin = document.getElementById('display-pin').value;
+    const typedNumber = document.getElementById('typed-numbers').value;
+    /* success & failure const */
+    const successMessage = document.getElementById('notify-success');
+    const failError = document.getElementById('notify-fail');
+    /*Success & Failure Message with conditional each other */
+    if (pin == typedNumber) {
+        successMessage.style.display = 'block';
+        failError.style.display = 'none';
+    }
+    else {
+        successMessage.style.display = 'block';
+        failError.style.display = 'block';
+    }
+
+}
